@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AntiCatcher.UsrData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,20 @@ namespace AntiCatcher
     {
         static void Main(string[] args)
         {
-            UsrData.UsrInfo usr1 = new UsrData.UsrInfo();
+            UsrInfo usr1 = new UsrInfo();
 
             #region userInit
             usr1.FirstName = ("Andrey");
             usr1.LastName = ("Abramov");
             usr1.CarSign = ("а456кк777");
+            /*if (Regex.IsMatch(inputNumber, "^[а-я]\\d{3}[а-я]{3}\\d{3}$"))
+                usr1.CarSign = inputNumber;
+            else
+                Console.WriteLine($"'{inputNumber}' is not a car sign.")*/ //ввод номера по шаблону
             usr1.PhoneNumber = ("+79314567432");
             #endregion
 
-            List<UsrData.UsrInfo> UsrBd = new List<UsrData.UsrInfo>() { };
+            List<UsrInfo> UsrBd = new List<UsrInfo>() { };
 
             UsrBd.Add(usr1);
 
@@ -29,8 +34,9 @@ namespace AntiCatcher
 
             Logic.Compare comp1 = new Logic.Compare();
 
-            comp1.CompareUsr(comparison, UsrBd);
+            comp1.CompareUsr(comparison, UsrBdы);
 
+             
             
             Console.ReadLine();
             
