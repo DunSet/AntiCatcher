@@ -13,7 +13,7 @@ namespace AntiCatcher
     {
         static void Main(string[] args)
         {
-            UsrInfo usr1 = new UsrInfo();
+            UsrInfo usr1 = new UsrInfo();//
 
             #region userInit
             usr1.FirstName = ("Andrey");
